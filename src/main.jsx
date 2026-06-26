@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
-const img = (name) => `/src/assets/${name}`;
+const img = (name) => `${import.meta.env.BASE_URL}assets/${name}`;
 const today = new Date().toISOString().slice(0, 10);
 const addDays = (n) => new Date(Date.now() + n * 86400000).toISOString().slice(0, 10);
 const uid = (prefix) => `${prefix}-${Date.now().toString().slice(-6)}`;
